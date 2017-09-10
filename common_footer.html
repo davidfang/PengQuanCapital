@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<script src="assets/js/jquery-1.10.1.min.js"></script>
+<!--页脚-->
+<footer>
+    <div class="wrap">
+        <div class="clearfix">
+            <div class="links">
+                <ul>
+                    <li>关于我们</li>
+                    <li><a href="adviser.html" target="_blank" onclick="ga('send','event','yj','click','1');" rel="nofollow">关于晋商易贷网</a></li>
+                </ul>
+                <div class="edaiQR">
+                    <p>扫一扫，关注我们</p>
+                    <img src="assets/images/QRcode.png" width="140px" height="140px" alt="晋商易贷金融二维码">
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="contact">
+                    <div class="my_youxiang"><img src="assets/images/youxiangs.png" alt="邮箱"/>邮箱 <span>surport@quanziben.cn</span></div>
+                    <div class="my_phone"><img src="assets/images/dianhua.png" alt="电话"/>电话 <span>400-6056-888</span></div>
+                    <div class="my_adess"><img src="assets/images/dizhi.png" alt="地址"/>地址 <span>北京市朝阳区大屯路金泉时代广场1单元23层</span></div>
+                    <div class="my_share"><i></i>关注我们 <span><i style="background: url('assets/images/youxiang.png') no-repeat"></i><i style="background: url('assets/images/xinlang.png') no-repeat"></i><i style="background: url('assets/images/kongjian.png') no-repeat"></i><i style="background: url('assets/images/weixin.png') no-repeat"></i></span></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--底部悬停-->
+<div class="freecall" style="display: block;">
+    <div class="wrap">
+        <div class="fl" style="color: #d23a3d;">
+            <i class="tel24"></i>贷款咨询：<b>4006-5858-09</b>
+        </div>
+        <form method="" action="" class="fr">
+            <input class="tel24-num" type="text" placeholder="请输入电话号码" maxlength="11" onkeyup="callback.replaceNoNum(this);" onfocus="callback.focusMsg(this); $(this).blur(function(){callback.blurMsg(this)})">
+            <input class="btn-freecall" id="huibo_tonglan" type="button" value="免费通话" onclick="callback.call(this, '97795');">
+        </form>
+    </div>
+</div>
+</body>
+</html>

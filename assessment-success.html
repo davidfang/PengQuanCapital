@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>晋商易贷</title>
+    <meta content="北京贷款,北京贷款公司,抵押贷款" name="keywords">
+    <meta content="比易贷网更牛逼的贷款、北京晋商易贷网提供房产抵押、汽车抵押（不押车）、无抵押信用贷款，北京做生意资金周转能贷，个人购房、买车、装修缺钱也能贷。按揭放大超高额度，月薪3千即贷超低门槛，手续齐全当天放款! " name="description">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <script src="assets/js/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+<!--头部内容-->
+<header>
+    <div class="main">
+        <ul>
+            <li class="fl">贷款就上晋商易贷!<a href="#" target="_blank">关注公众号：晋商易贷</a></li>
+            <li class="fr">
+                <a href="SignIn.html" target="_blank">登录</a>
+                <a href="register.html" target="_blank">注册</a>
+                <a id="topQRcode" href="javascript:void(0);"><i class="icon-tel"></i>手机晋商易贷</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<!--头部内容end-->
+<!--nav-->
+    <nav>
+        <div class="wrap">
+            <h1 class="logo fl"><a href="index.html">易贷网金融</a><i class="logo-border"></i></h1>
+            <div class="area fl">
+                <div class="fl"><em>贷款</em>
+                    <a id="city-choose" href="javascript:void(0);">【 <i id="choosecity">北京</i> 】</a>
+                </div>
+                <div class="top-tel fl">
+                    <img src="assets/images/head_phone.png" height="34" width="33" alt="贷款咨询热线">
+                    <span>4006-5858-09</span>
+                </div>
+            </div>
+            <div class="nav fr">
+                <a href="index.html">首页</a>
+                <a href="mortgage.html">找贷款</a>
+                <a href="applyloan.html">贷款申请</a>
+                <a href="assessment.html" class="nav-on">我要评估</a>
+                <a href="lookconsu.html">找顾问</a>
+                <!--<a href="#">成为合伙人</a>-->
+            </div>
+        </div>
+    </nav>
+<!--nav end-->
+<!--section start-->
+    <section>
+        <div class="wrap">
+        <div class="apply-top">
+            <a href="index.html">贷款首页</a>>
+            <a href="assessment.html">贷款评估</a>
+        </div>
+        <div class="apply-content">
+            <div class="apply-content-title">
+                <div class="apply-content-title-left">贷款评估 <span>能贷多少？1分钟评估你就知道</span></div>
+                <div class="apply-content-title-right"><i>声明:</i>您填写的信息将只作为贷款产品推荐使用,不会以任何形式泄露给其他人员或机构</div>
+            </div>
+            <div class="apply-content-content" style="height: 726px;">
+                <div class="assuess">
+                    <h3 class="assuess-tit">预估贷款额度</h3>
+                    <p>1~3万</p>
+                    <div class="int-suc">
+                        <img src="assets/images/duihao.png" alt=""/>
+                        <h3>恭喜完成！</h3>
+                        <h4>请输入您的联系方式,我们将评估结果发送至您的手机</h4>
+                    </div>
+                    <div class="int-btn">
+                        <input class="int-btn-1" type="text" placeholder="请输入您的手机号"  onafterpaste="this.value=this.value.replace(/\D/g,'')" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" maxlength="11" id="mobile" name="phone" data-error-tip="请输入11位手机号"/>
+                        <!--<input class="int-btn-2" type="text"/><img src="http://cq.edai.com/authImg/show/" class="authimg" id="authimg" style="cursor:pointer;" onclick="this.src=this.src + Math.ceil(Math.random()*10000)" title="看不清？换一张">-->
+                        <div class="int-btn-get">
+                            <input class="int-btn-3" type="text" placeholder="请输入您的验证码"/>
+                            <input class="int-btn-3-1" type="submit" value="获取验证码"/>
+                            <!--<input type="button" onclick="shenqing.get_yzm(1);" name="getAuthCode" id="getAuthCode" style="width: 100px; font-size: 12px;" maxlength="6" class="ui-btn btn-code fr" value="获取短信验证码">-->
+                        </div>
+                        <div class="int-btn-sub">
+                            <input class="int-btn-4" type="text" value="提交"/><input class="int-btn-4-1" type="text" value="重新评估" onclick="window.location.href='assessment.html';"/>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            <div class="assessment-down">
+                <div class="wrap880 mess-list">
+                    <div class="mess-list-tit">
+                        <p>根据您填写的信息,合适您的贷款产品如下：</p>
+                    </div>
+                    <div class="mess-list-cont">
+                        <ul>
+                            <li><span class="cont1">产品名称</span><span class="cont2">月利率</span><span class="cont3">放款额度</span><span class="cont4">联系方式</span><span class="cont5">操作</span></li>
+                            <li class="cont-box">
+                                    <img src="assets/images/list-head.png" alt=""/>
+                                    <h3 class="box1">信用贷款</h3>
+                                    <h3 class="box2">面议</h3>
+                                    <h3 class="box3">2-500万</h3>
+                                    <h3>1234 8888</h3>
+                                <div class="box4">详情</div>
+                            </li>
+                            <li class="cont-box">
+                                <img src="assets/images/list-head.png" alt=""/>
+                                <h3 class="box1">信用贷款</h3>
+                                <h3 class="box2">面议</h3>
+                                <h3 class="box3">2-500万</h3>
+                                <h3>1234 8888</h3>
+                                <div class="box4">详情</div>
+                            </li>
+                            <li class="cont-box">
+                                <img src="assets/images/list-head.png" alt=""/>
+                                <h3 class="box1">信用贷款</h3>
+                                <h3 class="box2">面议</h3>
+                                <h3 class="box3">2-500万</h3>
+                                <h3>1234 8888</h3>
+                                <div class="box4">详情</div>
+                            </li>
+                            <li class="cont-box">
+                                <img src="assets/images/list-head.png" alt=""/>
+                                <h3 class="box1">信用贷款</h3>
+                                <h3 class="box2">面议</h3>
+                                <h3 class="box3">2-500万</h3>
+                                <h3>1234 8888</h3>
+                                <div class="box4">详情</div>
+                            </li>
+                            <div class="cont-btn">查看更多产品>></div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="wrap300 dyn">
+                    <div class="dyn-tit">
+                        <h3>贷款咨询动态</h3>
+                    </div>
+                    <div class="dyn-cot">
+                        <marquee style="height: 183px;" behavior="up" direction="up" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="3">
+                            <ul>
+                                <li><i>三天前</i>1330*******咨询了 刘德印</li>
+                                <li><i>三天前</i>1330*******咨询了 刘德印</li>
+                                <li><i>三天前</i>1330*******咨询了 刘德印</li>
+                                <li><i>三天前</i>1330*******咨询了 刘德印</li>
+                                <li><i>三天前</i>1330*******咨询了 刘德印</li>
+                                <li><i>三天前</i>1330*******咨询了 刘德印</li>
+                                <li><i>三天前</i>1330*******咨询了 刘德印</li>
+                                <li><i>三天前</i>1330*******咨询了 刘德印</li>
+                                <li><i>三天前</i>1330*******咨询了 刘德印</li>
+                                <li><i>三天前</i>1330*******咨询了 刘德印</li>
+                                <li><i>三天前</i>1330*******咨询了 刘德印</li>
+                                <li><i>三天前</i>1330*******咨询了 刘德印</li>
+                            </ul>
+                        </marquee>
+                    </div>
+                </div>
+                <div class="wrap300 success-case">
+                    <div class="success-case-tit">
+                        <h3>成功案例</h3>
+                        <h4><a href="Successfulcase.html">更多</a></h4>
+                    </div>
+                    <div class="success-case-cot">
+                        <div class="success-case-cot-box">
+                            <p>房产抵押 <br/>月利率：3.80-5.00% <br/>贷款金额：30万元</p>
+                            <h3>成功</h3>
+                        </div>
+                        <div class="success-case-cot-box">
+                            <p>房产抵押 <br/>月利率：3.80-5.00% <br/>贷款金额：30万元</p>
+                            <h3>成功</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--section end-->
+<!--页脚-->
+    <footer>
+        <div class="wrap">
+            <div class="clearfix">
+                <div class="links">
+                    <ul>
+                        <li>关于我们</li>
+                        <li><a href="adviser.html" target="_blank" onclick="ga('send','event','yj','click','1');" rel="nofollow">关于晋商易贷网</a></li>
+                    </ul>
+                    <div class="edaiQR">
+                        <p>扫一扫，关注我们</p>
+                        <img src="assets/images/QRcode.png" width="140px" height="140px" alt="晋商易贷金融二维码">
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="contact">
+                        <div class="my_youxiang"><img src="assets/images/youxiangs.png" alt="邮箱"/>邮箱 <span>surport@quanziben.cn</span></div>
+                        <div class="my_phone"><img src="assets/images/dianhua.png" alt="电话"/>电话 <span>4006-5858-09</span></div>
+                        <div class="my_adess"><img src="assets/images/dizhi.png" alt="地址"/>地址 <span>北京市朝阳区大屯路金泉时代广场1单元23层</span></div>
+                        <div class="my_share"><i></i>关注我们 <span><i style="background: url('assets/images/youxiang.png') no-repeat"></i><i style="background: url('assets/images/xinlang.png') no-repeat"></i><i style="background: url('assets/images/kongjian.png') no-repeat"></i><i style="background: url('assets/images/weixin.png') no-repeat"></i></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!--底部悬停-->
+<div class="freecall" style="display: block;">
+    <div class="wrap">
+        <div class="fl" style="color: #d23a3d;">
+            <i class="tel24"></i>贷款咨询：<b>4006-5858-09</b>
+        </div>
+        <form method="" action="" class="fr">
+            <input class="tel24-num" type="text" placeholder="请输入电话号码" maxlength="11" onkeyup="callback.replaceNoNum(this);" onfocus="callback.focusMsg(this); $(this).blur(function(){callback.blurMsg(this)})">
+            <input class="btn-freecall" id="huibo_tonglan" type="button" value="免费通话" onclick="callback.call(this, '97795');">
+        </form>
+    </div>
+</div>
+<!-- share 悬停-->
+<div class="share">
+    <ul><li><p style="color: #fff;float: right;">比 <br/>一 <br/>比</p><p style="color: #fff;margin-top: -18px;float: left;">算 <br/>一 <br/>算</p></li>
+        <li><a href="assessment.html"><img src="assets/images/compt.png" alt=""/></a></li>
+    </ul>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"0","bdPos":"right","bdTop":"100"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+</body>
+</html>

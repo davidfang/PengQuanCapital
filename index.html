@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>北京贷款_抵押贷款_质押贷款_晋商易贷网</title>
+    <meta content="晋商易贷,北京贷款公司,北京贷款,抵押贷款,质押贷款" name="keywords">
+    <meta content="比易贷网更牛逼的贷款、北京晋商易贷网提供房产抵押贷款、汽车抵押贷款（不押车）、无抵押信用贷款，质押贷款。北京做生意资金周转能贷，个人购房、买车、装修缺钱也能贷。按揭放大超高额度，月薪3千即贷超低门槛，手续齐全最快当天放款!" name="description">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <script src="assets/js/jquery-1.10.1.min.js"></script>
+</head>
+<style>
+.phone-sub{
+    width: 44px;
+    height: 34px;
+    color: #ffffff;
+    background-color: rgb(210, 58, 61);
+}
+    .phone-input{
+        height: 30px;
+        border: 1px solid #ddd;
+        margin-top: 10px;
+    }
+    .bgshow{
+        background: #86b0ff;
+    }
+    .submit{
+        display: none;
+        text-align: center;
+    }
+</style>
+<body>
+    <!--header-->
+    <div id="index_top"></div>
+<!--nav-->
+    <nav>
+        <div class="wrap">
+            <h1 class="logo fl"><a href="index.html">易贷网金融</a><i class="logo-border"></i></h1>
+            <div class="area fl">
+                <div class="fl"><em>贷款</em>
+                    <a id="city-choose" href="javascript:void(0);">【 <i id="choosecity">北京</i> 】</a>
+                </div>
+                <div class="top-tel fl">
+                    <img src="assets/images/head_phone.png" height="34" width="33" alt="贷款咨询热线">
+                    <span>4006-5858-09</span>
+                </div>
+            </div>
+            <div class="nav fr">
+                <a href="index.html" class="nav-on">首页</a>
+                <a href="mortgage.html">找贷款</a>
+                <a href="applyloan.html">贷款申请</a>
+                <a href="assessment.html">我要评估</a>
+                <a href="lookconsu.html">找顾问</a>
+                <!--<a href="#">成为合伙人</a>-->
+            </div>
+        </div>
+    </nav>
+<!--nav end-->
+<!--轮播 申请-->
+    <div class="banner">
+        <div class="apply wrap">
+            <div class="content">
+            <h3 style="margin:20px 0 25px 0;">申请贷款</h3>
+            <form class="applyForm" id="applyForm1" onsubmit="return global.submitCheckInput(this.id);" method="POST" action="applyloan-success.html" target="_blank">
+                <div class="name clearfix">
+                    <input type="text" maxlength="2" placeholder="您的姓氏" name="xin" autocomplete="off">
+                    <div class="sex">
+                        <label><input name="0" type="radio" value="先生" style="display:block;"/>先生</label>
+                        <label><input name="0" type="radio" value="女士" style="display:block;"/>女士</label>
+                    </div>
+                </div>
+                <div class="sum clearfix">
+                    <input onkeyup="this.value=this.value.replace(/[^0-9|\.^]/g,'');" onafterpaste="this.value=this.value.replace(/\D/g,'');" maxlength="5" placeholder="贷款金额 (万元)" name="money" type="text" accept="number" autocomplete="off">
+                </div>
+                <div class="tel">
+                    <input type="text" maxlength="11" name="phone" onkeyup="this.value=this.value.replace(/[^0-9|\.^]/g,'');" onafterpaste="this.value=this.value.replace(/\D/g,'');" placeholder="输入手机号" accept="number" autocomplete="off">
+                </div>
+                <div class="main-captcha clearfix">
+                    <input type="text" maxlength="4" name="checkCode" id="checkCode" placeholder="输入图形验证码" value="">
+                    <img src="http://cq.edai.com/authImg/show/" class="authimg" id="authimg" style="cursor:pointer;" onclick="this.src=this.src + Math.ceil(Math.random()*10000)" title="看不清？换一张">
+                </div>
+                <input type="hidden" name="tmpId" id="tmpid" value="">
+                <input type="hidden" value="0" name="isUrl" id="isUrl">
+                <input type="hidden" name="fromAnli" id="fromAnli" value="0">
+                <input type="hidden" name="source" id="source" value="26">
+                <input type="submit" class="btn_apply but_submit" value="立即申请">
+            </form>
+        </div>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="assets/images/banner.png" alt="轮播图"/></div>
+                <div class="swiper-slide"><img src="assets/images/banner1.png" alt="轮播图"/></div>
+                <div class="swiper-slide"><img src="assets/images/banner3.png" alt="轮播图"/></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+<!--轮播 申请 end-->
+<!--section start-->
+<section>
+    <!-- 通知 start-->
+    <div class="top">
+        <div class="wrap">
+            <marquee behavior="up" direction="left" onMouseOut="this.start()"onMouseOver="this.stop()">
+            <i style="background: url('assets/images/tongzhi.png')"></i>
+
+            <p>符合信贷公司对收入的基本要求条件,征信记录良好的话,完全可以申请 <span>2016-05-27 02:40:35</span></p>
+            </marquee>
+        </div>
+    </div>
+<div class="ad">
+    <div class="wrap">
+        <div class="item">
+            <i style="background: url('assets/images/duo-.png')"></i>
+
+            <div class="info">
+                <h3>高额度贷款</h3>
+
+                <p>挖掘客户贷款资质,组<br/>各种贷款产品额度源自信</p>
+            </div>
+            <div class="submit">
+                <input class="phone-input" type="text"  maxlength="11" name="phone" onkeyup="this.value=this.value.replace(/[^0-9|\.^]/g,'');" onafterpaste="this.value=this.value.replace(/\D/g,'');" placeholder="输入手机号" accept="number" autocomplete="off"/><input class="phone-sub" type="submit" value="提交"/>
+            </div>
+        </div>
+        <div class="item">
+            <i style="background: url('assets/images/wen.png')"></i>
+            <div class="info">
+                <h3>安全稳健</h3>
+
+                <p>贷款零风险低门槛不等于 <br/>不可靠</p>
+            </div>
+            <div class="submit">
+                <input class="phone-input" type="text"  maxlength="11" name="phone" onkeyup="this.value=this.value.replace(/[^0-9|\.^]/g,'');" onafterpaste="this.value=this.value.replace(/\D/g,'');" placeholder="输入手机号" accept="number" autocomplete="off"/><input class="phone-sub" type="submit" value="提交"/>
+            </div>
+        </div>
+        <div class="item">
+            <i style="background: url('assets/images/kuai.png')"></i>
+
+            <div class="info">
+                <h3>快速贷款</h3>
+
+                <p>时间是最昂贵的利息,天 <br/>下贷款唯快不破</p>
+            </div>
+            <div class="submit">
+                <input class="phone-input" type="text"  maxlength="11" name="phone" onkeyup="this.value=this.value.replace(/[^0-9|\.^]/g,'');" onafterpaste="this.value=this.value.replace(/\D/g,'');" placeholder="输入手机号" accept="number" autocomplete="off"/><input class="phone-sub" type="submit" value="提交"/>
+            </div>
+        </div>
+        <div class="item">
+            <i style="background: url('assets/images/hao.png')"></i>
+
+            <div class="info">
+                <h3>低门槛贷款</h3>
+
+                <p>资产、征信、年龄、晋商 <br/>易贷带您迈过这个坎</p>
+            </div>
+            <div class="submit">
+                <input class="phone-input" type="text"  maxlength="11" name="phone" onkeyup="this.value=this.value.replace(/[^0-9|\.^]/g,'');" onafterpaste="this.value=this.value.replace(/\D/g,'');" placeholder="输入手机号" accept="number" autocomplete="off"/><input class="phone-sub" type="submit" value="提交"/>
+            </div>
+        </div>
+        <div class="item">
+            <i style="background: url('assets/images/sheng.png')"></i>
+
+            <div class="info">
+                <h3>低利率贷款</h3>
+
+                <p>比个人住房公积金更低的 <br/>贷款优势大于政策</p>
+            </div>
+            <div class="submit">
+                <input class="phone-input" type="text"  maxlength="11" name="phone" onkeyup="this.value=this.value.replace(/[^0-9|\.^]/g,'');" onafterpaste="this.value=this.value.replace(/\D/g,'');" placeholder="输入手机号" accept="number" autocomplete="off"/><input class="phone-sub" type="submit" value="提交"/>
+            </div>
+        </div>
+        <script>
+            $(".item").mouseover(function(){
+                $(".submit").css("display","none");
+                $(this).find(".submit").css("display","block");
+                $(".item").attr("class","item");
+                $(this).attr("class","item bgshow");
+            });
+            $(".phone-input").change(function(){
+                var cont = $(this).val();
+                if(cont.length == "11"){
+//                    $(".phone-sub").css("background-color","#d23a3d");
+                }
+            })
+        </script>
+    </div>
+</div>
+<div style="background: #fff;overflow: hidden;" class="main">
+    <div class="wrap880">
+        <div class="title clearfix">
+            <h3><i></i>专项贷款方案</h3> <h4>为您量身打造贷款方案,满足您的多种需求!</h4><a class="more" href="mortgage.html" rel="nofollow" target="_blank">更多+</a>
+        </div>
+        <div class="special clearfix box_title">
+            <div class="box"><a href="mortgagedaexinyong.html"><h5>资金周转贷款</h5><img src="assets/images/fangan1.png"/><span></span></a>
+
+                <p>短期长期任您挑 最快当天找到钱<br>渠道更全、利息更低、放款更快</p></div>
+            <div class="box"><a href="mortgagemonth.html"><h5>购房贷款</h5><img src="assets/images/fangan2.png"/><span></span></a>
+
+                <p>每月存款买房难,年轻啃老遭嫌弃<br>找易贷,让您买的起也住的起</p></div>
+            <div class="box"><a href="mortgagebaodandai.html"><h5>装修贷款</h5><img src="assets/images/fangan3.png"/><span></span></a>
+
+                <p>自有产权,租赁铺面或住房都可贷 <br/>交房就找易贷网 不用存钱搞装修</p></div>
+            <div class="box"><a href="mortgagegongxin.html"><h5>创业贷款</h5><img src="assets/images/fangan4.png"/><span></span></a>
+
+                <p>解决您的燃煤之急,未促成不收费 <br/>自主创业贷款就来这儿!</p></div>
+            <div class="box"><a href="mortgagecar.html"><h5>购车贷款</h5><img src="assets/images/fangan5.png"/><span></span></a>
+
+                <p>晋商易贷让您提前拥有满意座驾 <br/>一个电话马上提高您的生活品质</p></div>
+            <div class="box"><a href="mortgageqiyexinyong.html"><h5>经营贷款</h5><img src="assets/images/fangan6.png"/><span></span></a>
+
+                <p>世界那么大,“贷”您去看看 <br/>手续简单、三年授信、随借随还</p></div>
+        </div>
+    </div>
+    <div class="wrap300">
+        <div class="title">
+            <h3><i></i>贷款资质</h3>
+            <!--<a class="more" href="#" rel="nofollow" target="_blank">更多+</a>-->
+        </div>
+        <div class="aptitude">
+            <div class="item">
+                <div class="clearfix">
+                    <a href="javascript:;" target="_blank">
+                        <i class="aptitude-house" style="background: url('assets/images/havhouse.png') no-repeat;"></i>
+                    </a>
+
+                    <div class="info">
+                        <h5><a href="havehouse.html" target="_blank">我有房</a></h5>
+
+                        <p>有房就能贷</p>
+                    </div>
+                </div>
+                <p>抵押贷款、二次抵押贷款、按揭房放大贷</p>
+            </div>
+            <div class="item">
+                <div class="clearfix">
+                    <a href="havecar.html" target="_blank">
+                        <i class="aptitude-house" style="background: url('assets/images/car.png') no-repeat;"></i>
+                    </a>
+
+                    <div class="info">
+                        <h5><a href="havecar.html" target="_blank">我有车</a></h5>
+
+                        <p>有车就能贷</p>
+                    </div>
+                </div>
+                <p>新车贷,车辆抵押贷款,按揭车放大款</p>
+            </div>
+            <div class="item">
+                <div class="clearfix">
+                    <a href="shangbanzu.html" target="_blank">
+                        <i class="aptitude-house" style="background: url('assets/images/workpeople.png') no-repeat;"></i>
+                    </a>
+
+                    <div class="info">
+                        <h5><a href="shangbanzu.html" target="_blank">我是上班族</a></h5>
+
+                        <p>月收入2000即可贷</p>
+                    </div>
+                </div>
+                <p>身份证贷款,手机贷款,公积金贷款</p>
+            </div>
+            <div class="item">
+                <div class="clearfix">
+                    <a href="qiyezhu.html" target="_blank">
+                        <i class="aptitude-house" style="background: url('assets/images/comp.png') no-repeat;"></i>
+                    </a>
+
+                    <div class="info">
+                        <h5><a href="qiyezhu.html" target="_blank">我是企业主</a></h5>
+
+                        <p>有经营场所就能贷</p>
+                    </div>
+                </div>
+                <p>双周供、循环贷、存低贷、气球贷</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="padding-top: 20px;background: #fff;" class="wrap mt30 clearfix">
+    <div class="title clearfix">
+        <h3><i></i>找贷款顾问</h3><span>贷款很专业，贷款顾问为您提供一对一专业贷款咨询服务！</span><a class="more" href="lookconsu.html" rel="nofollow" target="_blank">更多+</a>
+    </div>
+    <div class="adviser" id="adviser">
+        <ul class="imgList">
+            <li class="quepeo">
+                <a href="details.html"><img src="assets/images/guwen3.png" alt=""/></a>
+
+                <div class="quepeo_content">
+                    <h3>周然 <span>高级贷款顾问</span></h3>
+
+                    <p>主营业务 <br/>房产抵押 车贷</p>
+                    <label class="innumber" for=""><input type="text" placeholder="输入电话号"/></label>
+                    <label class="freephone" for="" style="display: block;"><input type="submit" value="免费通话"/></label>
+                </div>
+            </li>
+            <li class="quepeo">
+                <a href="details.html"><img src="assets/images/guwen2.png" alt=""/></a>
+
+                <div class="quepeo_content">
+                    <h3>周然 <span>高级贷款顾问</span></h3>
+
+                    <p>主营业务 <br/>房产抵押 车贷</p>
+                    <label class="innumber" for=""><input type="text" placeholder="输入电话号"/></label>
+                    <label class="freephone" for="" style="display: block;"><input type="submit" value="免费通话"/></label>
+                </div>
+            </li>
+            <li class="quepeo">
+                <a href="details.html"><img src="assets/images/guwen1.png" alt=""/></a>
+
+                <div class="quepeo_content show">
+                    <h3>周然 <span>高级贷款顾问</span></h3>
+
+                    <p>主营业务 <br/>房产抵押 车贷</p>
+                    <label class="innumber" for=""><input type="text" placeholder="输入电话号"/></label>
+                    <label class="freephone" for="" style="display: block;"><input type="submit" value="免费通话"/></label>
+                </div>
+            </li>
+            <li class="quepeo">
+                <a href="details.html"><img src="assets/images/guwen2.png" alt=""/></a>
+
+                <div class="quepeo_content">
+                    <h3>周然 <span>高级贷款顾问</span></h3>
+
+                    <p>主营业务 <br/>房产抵押 车贷</p>
+                    <label class="innumber" for=""><input type="text" placeholder="输入电话号"/></label>
+                    <label class="freephone" for="" style="display: block;"><input type="submit" value="免费通话"/></label>
+                </div>
+            </li>
+            <li class="quepeo">
+                <a href="details.html"><img src="assets/images/guwen3.png" alt=""/></a>
+
+                <div class="quepeo_content">
+                    <h3>周然 <span>高级贷款顾问</span></h3>
+
+                    <p>主营业务 <br/>房产抵押 车贷</p>
+                    <label class="innumber" for=""><input type="text" placeholder="输入电话号"/></label>
+                    <label class="freephone" for="" style="display: block;"><input type="submit" value="免费通话"/></label>
+                </div>
+            </li>
+            <li class="quepeo">
+                <a href="details.html"><img src="assets/images/guwen1.png" alt=""/></a>
+
+                <div class="quepeo_content">
+                    <h3>周然 <span>高级贷款顾问</span></h3>
+
+                    <p>主营业务 <br/>房产抵押 车贷</p>
+                    <label class="innumber" for=""><input type="text" placeholder="输入电话号"/></label>
+                    <label class="freephone" for="" style="display: block;"><input type="submit" value="免费通话"/></label>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(".quepeo").mouseover(function(){
+    $(".quepeo").find(".quepeo_content").attr("class","quepeo_content");
+    $(this).find(".quepeo_content").attr("class","quepeo_content show");
+    });
+
+</script>
+
+<div class="consultation">
+    <div class="wrap">
+        <div class="wrap880">
+            <div class="title clearfix">
+                <h3><i></i>成功案例</h3><span>他们通过易贷网成功贷款！成功放款人数：<b>32万8529</b> 人,放款总金额：<b>232亿7885万</b> 元</span><a class="more" href="Successfulcase.html" rel="nofollow" target="_blank">更多+</a>
+            </div>
+            <div class="case clearfix">
+                <div class="item">
+                    <div class="head">
+                        <a href="highct.html">
+                            <div class="case01" style="background: url('assets/images/edugao.png') no-repeat"></div>
+                            <h5>额度高</h5>
+                        </a>
+                    </div>
+                    <div class="con">
+                        <h6><a href="javascript:;">余女士组合贷款</a></h6>
+
+                        <div class="info">贷款金额：<span>85万元</span></div>
+                        <p>不同贷款产品办理的先后顺序，那些产品可以同时办理而不排斥，抵押贷款是全额抵押还是按份额抵押……<a href="javascript:;">详情&gt;&gt;</a></p>
+                    </div>
+                </div>
+.
+                <div class="item">
+                    <div class="head">
+                        <a href="highct-kuai.html">
+                            <div class="case02" style="background: url('assets/images/sudukuai.png') no-repeat"></div>
+                            <h5>速度快</h5>
+                        </a>
+                    </div>
+                    <div class="con">
+                        <h6><a href="javascript:;">徐先生当天放款</a></h6>
+
+                        <div class="info">贷款金额：<span>40万元</span></div>
+                        <p>贷款的拖延大多是浪费在资料准备，或者审批失败变更贷款产品上。易贷网的专业性和整合所有贷款渠道的……<a href="javascript:;">详情&gt;&gt;</a></p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="head">
+                        <a href="highct-hao.html">
+                            <div class="case03" style="background: url('assets/images/menkandi.png') no-repeat"></div>
+                            <h5>门槛低</h5>
+                        </a>
+                    </div>
+                    <div class="con">
+                        <h6><a href="javascript:;">三无人员李先生贷款</a></h6>
+
+                        <div class="info">贷款金额：<span>8万元</span></div>
+                        <p>仅凭身份证就能贷款那是商家的噱头，任何贷款都有资质和征信的要求，易贷网整合了市场上所有的正规……<a href="javascript:;">详情&gt;&gt;</a></p>
+                    </div>
+                </div>
+
+                <div class="item mr0">
+                    <div class="head">
+                        <a href="highct-sheng.html">
+                            <div class="case04" style="background: url('assets/images/lilvdi.png') no-repeat"></div>
+                            <h5>利率低</h5>
+                        </a>
+                    </div>
+                    <div class="con">
+                        <h6><a href="javascript:;">公务员王先生贷款</a></h6>
+
+                        <div class="info">贷款金额：<span>16万元</span></div>
+                        <p>除了贷款利率的具体数值，还应该关注还款方式、每期还款金额的本金和利息构成、提前还款的违约金……<a href="javascript:;">详情&gt;&gt;</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="wrap300">
+            <div class="title clearfix">
+                <h3><i></i>贷款资讯</h3>
+                <!--<a class="more" href="#" rel="nofollow" target="_blank">更多+</a>-->
+            </div>
+            <div class="mess clearfix">
+                <ul>
+                    <li><a href="consultation.html">大学生应当警惕四种网络贷款“陷阱”</a></li>
+                    <li><a href="consultation.html">民间投资下降的五个特征 供改革为核心因素</a></li>
+                    <li><a href="consultation.html">民间投资下降的五个特征 供改革为核心因素</a></li>
+                    <li><a href="consultation.html">民间投资下降的五个特征 供改革为核心因素</a></li>
+                    <li><a href="consultation.html">民间投资下降的五个特征 供改革为核心因素</a></li>
+                    <li><a href="consultation.html">民间投资下降的五个特征 供改革为核心因素</a></li>
+                    <li><a href="consultation.html">民间投资下降的五个特征 供改革为核心因素</a></li>
+                    <li><a href="consultation.html">民间投资下降的五个特征 供改革为核心因素</a></li>
+                    <li><a href="consultation.html">民间投资下降的五个特征 供改革为核心因素</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cperation">
+    <div class="wrap">
+        <div class="title clearfix">
+            <a href="javascript:;"><h3 id="cooperation" onmouseover="cprshow()"><i></i>合作机构</h3></a>
+            <a href="javascript:;"><h3 id="friendship" class="color-black" onmouseover="frdshipshow()"><i></i>友情链接</h3>
+            </a>
+            <!--<h3 id="cooperation"><i></i>合作机构</h3>-->
+            <!--<h3 id="friendship" class="color-black"><i></i>友情链接</h3>-->
+        </div>
+    </div>
+    <div class="bd">
+        <div class="cpr">
+            <ul>
+                <li><img src="assets/images/huaxiabank.jpg" alt=""/></li>
+                <li><img src="assets/images/zhongguo.png" alt=""/></li>
+                <li><img src="assets/images/jianhang.png" alt=""/></li>
+                <li><img src="assets/images/jiangsu.png" alt=""/></li>
+                <li><img src="assets/images/huaxiabank.jpg" alt=""/></li>
+                <li><img src="assets/images/gonghang.png" alt=""/></li>
+                <li><img src="assets/images/nongye.png" alt=""/></li>
+            </ul>
+        </div>
+        <div class="frdship" style="display: none">
+            <ul>
+                <li><a href="http://www.5spay.cn/" target="_blank"><img src="assets/images/quanrongtongconp.png" alt=""/></a></li>
+                <li><a href="https://www.quanziben.com/" target="_blank"><img src="assets/images/quanzibencomp.png" alt=""/></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    function cprshow(){
+    $(".cpr").css("display","block");
+    $(".frdship").css("display","none");
+    $("#cooperation").attr("class","");
+    $("#friendship").attr("class","color-black");
+    }
+    function frdshipshow(){
+    $(".cpr").css("display","none");
+    $("#cooperation").attr("class","color-black");
+    $("#friendship").attr("class","");
+    $(".frdship").css("display","block")
+    }
+</script>
+<!--section end-->
+
+</section>
+
+<!--footer-->
+<div id="index_foot"></div>
+
+<!-- share 悬停-->
+<div class="share">
+    <ul>
+        <li><p style="color: #fff;float: right;">比 <br/>一 <br/>比</p><p style="color: #fff;margin-top: -18px;float: left;">算 <br/>一 <br/>算</p></li>
+        <li><a href="assessment.html"><img src="assets/images/compt.png" alt=""/></a></li>
+    </ul>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"0","bdPos":"right","bdTop":"100"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<!-- Swiper JS -->
+<script src="assets/js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        autoplay : 3000,
+        paginationClickable: true
+    });
+    $(function(){
+        $("#index_top").load("common_top.html");
+        $("#index_foot").load("common_footer.html");
+    })
+</script>
+</body>
+</html>

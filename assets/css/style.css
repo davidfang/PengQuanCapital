@@ -1,0 +1,665 @@
+@charset "utf-8";
+/**
+ * 项目:贷款专案;
+ * 时间:2016/5/10;
+ **/
+
+
+/*浏览器重置*/
+body,dl,dd,h1,h2,h3,h4,h5,h6,p,form,ul,ol,li,input{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+body{line-height:1;}
+h3,h4,h5,h6{font-weight: normal;}
+ol,ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+html{height: 100%;}
+body{font:12px/15px 'Microsoft YaHei','Simsun',Arial,Helvetica,sans-serif;background-color:#fafafa;color:#666;height: 100%;}
+em,i{font-style: normal;}
+a{text-decoration:none;outline:none;color: #666;}
+a:active{noOutline:expression(this.onFocus=this.blur());}
+a:focus{outline:0;}
+p{font-size: 14px;}
+img{border: none;}
+.placeholder{color: #999;}
+
+/********** 布局框架 **********/
+.wrap{width:1200px;margin:0 auto; clear:both;}
+
+
+/********** index top **********/
+header{  background: #57626e;  color: #d0dae5;  min-width: 1200px;  height: 36px;  vertical-align: baseline;  }
+.main{  width: 1200px;  margin: 0 auto;  clear: both;  }
+.fl{  float: left;  }
+.fr{  float: right;  }
+.main ul li a{  color: #d0dae5;  margin-left: 16px;  line-height: 36px;  display: inline-block;  }
+nav{  width: 100%;  height: 95px;  background-color: #fff;  }
+nav .wrap{  width: 1200px;  margin: 0 auto;  clear: both;  }
+nav .logo {  width: 182px;  height: 65px;  margin: 15px 25px 0 0;  }
+nav .logo a {  display: block;  width: 165px;  height: 65px;  background-position: -5px -2px;  margin-top: 8px;  text-indent: -9999em;  float: left;  background: url("../images/logo.png") no-repeat;  }
+.area {  height: 95px;  position: relative;  z-index: 11;  line-height: 95px;  }
+.area em {  font-size: 24px;  color: #333;  }
+.area a {  margin: 0 12px;  }
+.top-tel {  margin-left: 30px;  }
+.area img {  position: relative;  top: 4px;  }
+.top-tel span {  margin-left: 12px;  color: #ee3f43;  font-size: 30px;  font-weight: 800;  }
+.nav {  height: 95px; /*margin-right: 125px;*/  line-height: 95px;  }
+.nav .nav-on {  color: #ee3f43;  }
+.nav a {  font-size: 18px;  margin-right: 20px;  font-weight: 700;  color: #666;  }
+.banner {  min-width: 1200px;  height: 379px;  background-color: #fff;  }
+/*marquee{  width: 1200px;  height: 65px;  overflow: hidden;  }*/
+
+/*标题*/
+.tit {height: 50px;width: auto;background-color: #eee;color: #666;}
+.tit h3 {font-size: 22px;text-indent: 20px;display: inline-block;float: left;line-height: 50px;}
+.tit .more {margin-right:20px; display: inline-block; color: #666;font-size: 14px; float: right;line-height: 60px;}
+.title {height: 35px; border-bottom: 1px solid #999;}
+.title h3 {font-size: 26px; color: #ee3f43; float: left;line-height: 24px; margin:0 35px 0 12px;position: relative;}
+.title h3 i {width: 21px; height: 9px; background-position: -731px -114px; position:absolute;top: 35px;left: 32px;}
+.title h3 strong {margin:0 18px; font-size: 0px;}
+.title h3 .icon-heart {width: 24px;height: 22px; background-position: -298px -99px; position: absolute;top: 2px;left: 28px;}
+.title span,.title a {color:#666; font-size: 14px; margin-top:8px; display: inline-block;float: left; margin-right: 20px;}
+.title span b {color: #fe6c00;}
+.title a:hover,.tit a:hover {color:#82b725;}
+.title .more {float: right; margin-right: 20px;}
+
+/*申请贷款*/
+
+input[type="text"]{text-indent: 12px;}
+input[type="button"]{cursor:pointer;}
+input[type="submit"]{line-height: 100%; cursor:pointer;}
+input[type="radio"] { margin: 0; padding:0;display: none;}
+.apply .content .name,.apply .content .sum,.apply .content .tel,.apply .content .btn_apply{width: 240px;margin: 10px auto; position: relative;height: 35px;}
+.apply .content .sum input[type="text"], .apply .content .tel input[type="text"]{height: 32px;width:240px;line-height: 32px;display:block;font-size:14px;top: 25px;+top: 25px;}
+.apply .content .sum {position: relative;z-index: 5; height: 32px;}
+.apply .content .sum input[type="text"]{width:120px; float: left;}
+.apply .content .sum .area input[type="text"]{width: 110px; float: right; color: #999; cursor:pointer;}
+.tip-text {  position: absolute;  background-color: #ffffe2;  border: 1px solid #ffd673;  color: #444;  padding: 5px;  display: none;  z-index: 6;  }
+.apply .content .sum input[type="text"], .apply .content .tel input[type="text"]{height: 32px;width:240px;line-height: 32px;display:block;font-size:14px;top: 25px;+top: 25px;}
+.apply .content .sum {position: relative;z-index: 5; height: 32px;}
+.apply .content .sum input[type="text"]{width:120px; float: left;}
+.apply .content .sum .area input[type="text"]{width: 110px; float: right; color: #999; cursor:pointer;}
+.apply .content .sum .area ul {  width: 110px;  display: none;  position: absolute;  top: 33px;  right: 0;  background-color: #fff;  border: 1px solid #ccc;  }
+.apply .content .sum .area ul li a {  width: 100%;  display: block;  height: 30px;  line-height: 30px;  text-align: left;  text-indent: 12px;  }
+.apply .content .sum input[type="text"], .apply .content .tel input[type="text"]{height: 32px;width:240px;line-height: 32px;display:block;font-size:14px;top: 25px;+top: 25px;}
+.apply .content .name input[type="text"]{height: 32px;width:120px;line-height: 32px;display:block;font-size:14px;float:left;position: relative;z-index: 1;}
+.apply .content .name .sex{position: relative;top: 10px;}
+.apply .content .sum {position: relative;z-index: 5; height: 32px;}
+.apply .content .sum input[type="text"]{width:120px; float: left;}
+.apply .content .sum .area input[type="text"]{width: 110px; float: right; color: #999; cursor:pointer;}
+.sex label{
+    overflow: hidden;
+    display: inline-block;
+}
+.sex label input{
+    display: block;
+    float: left;
+}
+/*提交按钮组*/
+.btn_freecall { width: 140px; background-color: #6ea40f; color: #fff; margin-left: 12px; }
+.btn_apply { background-color: #7faf2a; color: #fff; font-size: 18px;border: 1px solid #749f28;}
+.btn_apply:hover { background-color: #749f28;}
+.btn_side_apply{background-color: #859ab4; color: #fff; font-size: 18px; width: 240px;height: 40px;}
+.btn_side_apply:hover{background-color: #7a8da5;}
+
+.apply .content .main-captcha{width: 240px; margin:10px auto;position: relative;}
+.apply .content .main-captcha img{width: 110px; height: 34px; float: right; cursor: pointer;}
+.apply .content .main-captcha input[type="text"]{height: 32px;width:120px;line-height: 32px;font-size:14px;float: left;}
+.apply .content .main-captcha input[type="button"]{height: 34px;width: 110px; color: #fff;background-color: #859ab4; float: right;}
+.tip-text-error{color: #FF7E00;text-align: left;position: absolute;top: 237px;+top:241px;left: 35px;width: 240px;}
+.apply .content .btn_apply {  height: 40px;  top: 0px;  }
+
+/*轮播*/
+.banner .apply .content form input[type="text"] {  border: 1px solid #ccc;  }
+.banner .apply .content form .tip-text {  left: 0;  bottom: 44px;  }
+.banner .apply .content {  position: absolute;      right: 100px;  color: #fff;  width: 310px;  height: 360px;  top: 12px;  background: url("../images/beij.png");  }
+.banner .slide-container {  overflow: hidden;  position: relative;  }
+.banner .apply, .banner .slide .wrap {  position: relative;  z-index: 8;  }
+.banner .apply .content h3 {  text-align: center;  margin: 8px 0 15px 0;  font-size: 24px;  line-height: 40px;  }
+.banner .apply .content form {  text-align: center;  }
+section .top{  width: 100%;  height: 65px; }
+.wrap880 {  width: 880px;  margin-top: 30px;  float: left;  }
+.wrap880 .clearfix {  zoom: 1;  }
+.clearfix h4{  float: left;  line-height: 24px;  margin: 0 35px 0 12px;  position: relative;  font-size: 14px;  }
+.special .box a {  position: relative;  display: block;  width: 282px;  height: 100px;  overflow: hidden;  }
+.wrap300 {  width: 300px;  margin-top: 30px;  float: right;  }
+.aptitude .item {  border-top: 1px solid #ddd;      padding: 8px 15px 9px 30px;  }
+.aptitude .item .clearfix {  margin-bottom: 15px;  }
+.aptitude .item .info h5 a{font-size: 18px; color: #555; font-weight: 600; display: block; margin: 12px 0;}
+.aptitude .item .info h5 a:hover{color: #82b725}
+.aptitude .item:hover, .plan .content .item:hover {  background-color: #fcfcfc;  }
+.aptitude, .side-apply {  border: 1px solid #ddd;  background-color: #fff; margin-top: 20px; }
+
+.aptitude .item i {  width: 80px;  height: 62px;  float: left;  margin-right: 15px;  }
+.aptitude .item .info {  /*float: left;*/  }
+.special .box p {  width: 240px;  margin: 25px auto 0 auto;  font-size: 15px;  line-height: 24px;  }
+/*专项贷款方案*/
+.special .box{    margin-top: 20px;  background-color: #fff;  width: 264px;  height: 200px;  border: 1px solid #ddd;  float: left;  margin-right: 13px;  margin-left: 13px;}
+.special .box a{position: relative;display: block;width: 282px; height: 100px;overflow: hidden;}
+.special .box a img{    width: 264px;  height: 100px;}
+.special .box a span{width: 264px;  height: 100px;  position: absolute;  top: 0px;  left: 0;  opacity: 0;  filter: alpha(opacity=0);  -moz-opacity: 0;  -webkit-opacity: 0;  -khtml-opacity: 0;  background-color: #333;}
+.special .box a span:hover{  opacity: 0.5;  }
+.special .box a h5{position: absolute; top:20px; left:20px;z-index: 2;font-size: 22px;color: #fff;line-height: 24px;}
+.special .box p{width:240px; margin:25px auto 0 auto; font-size: 15px; line-height: 24px;}
+.box_title{    height: 470px;  background: #fff;  margin-top: 20px;  border: 1px solid #ddd;}
+
+/*ad*/
+.top p{  line-height: 65px;  font-size: 14px;  font-weight: 500; }
+.top i{  background: url(../images/tongzhi.png);  height: 25px;  width: 31px;  display: block;  float: left;  margin-top: 20px;  margin-right: 10px;  }
+.top span{  margin-left: 40px;  }
+.ad{  height: 157px;  background: #e2ab04;  }
+.ad .item{  width: 240px;  height: 157px;  float: left;  }
+.ad .item i {     display: block;
+    float: left;
+    width: 60px;
+    height: 68px;
+    margin-right: 9px;
+    margin-top: 36px;
+    margin-left: 12px;
+ }
+.ad .item .info {     float: left;
+    margin-top: 42px;
+    font-size: 16px;
+    color: #464739;  }
+.ad .item h3{    font-size: 18px;  font-weight: 800;}
+.ad .item p {  margin-top: 12px;  line-height: 18px;  }
+
+/* 成功案例 贷款咨询*/
+.case {  margin-top: 20px;  }
+.case .item {  background-color: #fff;  width: 211px;  float: left;  margin-right: 6px;  border: 1px solid #ddd;  }
+.case .item .head {  width: 185px;  margin: 0 auto;  border-bottom: 1px dashed #ddd;  height: 105px;  padding-top: 15px;  }
+.case .item .con {  width: 170px;  margin: 0 auto;  padding: 20px 0;  }
+.case01, .case02, .case03, .case04 {  width: 58px;  height: 58px;  display: block;  margin: 0 auto;  }
+.case .item h5{color:#859ab4;font-size: 24px;text-align: center;margin-top: 10px;line-height: 24px;}
+.case .item .con{width: 170px; margin: 0 auto; padding: 20px 0;}
+.case .item .con h6 a{font-size: 16px; color: #333; line-height: 18px;}
+.case .item .con h6 a:hover{color: #859ab4;}
+.case .item .con .info{margin-top: 10px; +margin-top:13px;font-size: 14px;line-height: 24px;}
+.case .item .con .info span{color: #333;}
+.case .item .con p{font-size:12px; margin-top: 16px; line-height: 24px;}
+.case .item .con p a{color: #53980f;}
+.case .item .con p a:hover{text-decoration: underline;}
+.mess{background: #fff;  border: 1px solid #ddd;  margin-top: 20px;  }
+.mess ul{  list-style: initial;  margin-left: 20px;  }
+.mess ul li{  border-bottom: 1px solid #ddd;  height: 36px;  line-height: 36px;  }
+.mess ul li:hover{  background: #fcfcfc;  }
+.consultation{   background: #fff;  width: 1200px;  margin: 0 auto;  clear: both;  overflow: hidden;}
+
+/*合作机构*/
+.cperation{ clear: both;  background: #f3f3f3;   padding-top: 24px;  margin-top: 43px;    height: 157px; }
+.bd {  padding: 20px 0;  overflow: hidden;  zoom: 1;  width: 1200px;  margin: 0 auto;  clear: both; }
+.bd ul li{   float: left;  margin-right: 17px;}
+
+/*底部悬浮*/
+.freecall{  display: block;  margin: 0 auto;opacity: 0.9;  clear: both;  height: 90px;  width: 100%;  position: fixed;  bottom: 0;  left: 0;  color: #fff;  font-size: 24px;  line-height: 90px;  z-index: 9;  background: #1d1d1d;  }
+.freecall .tel24{    background: url(../images/free_phone.png) no-repeat;  width: 50px;  height: 52px;  display: inline-block;  position: relative;  top: 13px;  left: 0;  margin-right: 15px;}
+.tel24-num{  height: 37px;  width: 264px; font-size: 17px;     float: left;  margin-top: 1.5rem;}
+.btn-freecall{       width: 200px;  height: 38px;  line-height: 38px;  background: #d23a3d;  color: #fff;     float: left;  margin-top: 1.5rem;}
+
+/*找顾问*/
+.copyright{  float: right;  width: 500px;  padding: 20px 0 0;  }
+.quepeo{  height: 231px;  margin-top: 31px;  margin-bottom: 57px;  float: left;  margin-right: 6px;}
+.quepeo_content{     float: right;  display: none;  width: 210px;  height: 228px;  text-align: center;  border: 1px solid #ddd;;}
+.quepeo_content h3{  font-size: 28px;  margin-top: 20px;  }
+.quepeo_content p{  width: 76%;  text-align: left;  margin: 0 auto;  margin-top: 20px;  line-height: 24px;  }
+.quepeo_content span{  font-size: 16px;}
+.quepeo_content .show:hover{background: #dddddd}
+.quepeo_content .innumber input{width: 163px;  height: 34px;  border: 1px solid #ddd;  margin-top: 20px;}
+.quepeo_content .freephone input{width: 163px;  height: 34px;  margin-top: 20px;  background: #46bef6;  color: #fff;}
+.show{  display: block;}
+
+/*share 悬停*/
+.share ul {  position: fixed;  z-index: 10;  top: 52%;  right: 0;  width: 57px;  height: auto;  background-color: #d23a3d;  padding: 20px 0;  }
+.share ul li {  width: 36px;  height: 40px;  display: block;  background-color: #d23a3d;  padding: 2px 0;  margin: 0 auto;  clear: both;  }
+.share ul li img{    width: 34px;  margin-top: 8px;}
+
+/*页尾*/
+footer {  clear: both;  min-width: 1200px;  height: 200px;  background-color: #57626e;  color: #acafb3; }
+footer .links {  margin: 25px 0 0 0; width: 450px;  float: left;  }
+footer .links ul {  float: left;  margin-right: 58px;  }
+footer .links ul li {  color: #fff;  font-size: 14px;  display: block;  margin-bottom: 12px;  }
+footer .links ul li a {  color: #acafb3;  }
+footer .links ul li a:hover{text-decoration: underline;}
+footer .links .edaiQR{float: right; text-align: center;font-size: 16px; color: #fff;}
+footer .links .edaiQR img{margin-top: 10px;}
+
+/*底部信息*/
+.contact div{  width: 506px;  height: 39px;  line-height: 39px;  font-size: 16px;  color: #fff;  }
+.contact span{  float: right;  }
+.contact .my_share{  text-align: right;  }
+.contact .my_share i{  width: 22px;  height: 20px;  display: block;  float: right;  margin-top: 10px;  margin-left: 10px;  }
+.contact img{  margin-right: 5px;  }
+
+/********** 贷款需求 贷款方案 贷款资质 **********/
+/*贷款需求*/
+.loan-title h3 {  width: 176px;  height: 50px;  font-size: 24px;  text-align: center;  line-height: 46px;  margin: 20px auto 20px auto;  position: relative;  z-index: 2;  border: 1px solid #000;  border-radius: 10px;  background: #ffffff;  }
+.loan-title hr {  width: 1200px;  border: 0;  background-color: #ccc;  height: 1px;  display: block;  position: absolute;  top: 20px;  left: 0;  z-index: 1;  }
+.loan-title {  position: relative;  margin-bottom: 25px;  }
+.loan-content{overflow: hidden}
+.loan{margin-bottom: 40px}
+.loan-box{     width: 227px;     height: 283px;  float: left;  margin-right: 10px;  border: 1px solid #ddd;  background-color: #fff;  padding-bottom: 30px;  }
+.loan-box p {clear: both;}
+.loan-box:hover{  border-color: #6eac00;  }
+.box-tit{  overflow: hidden;  background: #46bef6;  margin-bottom: 10px;}
+.box-tit img{     float: left;  width: 52px; margin-left: 15px; margin-top: 10px;  margin-bottom: 10px;}
+.box-tit h3{  float: left;  font-size: 24px;  margin-top: 30px;  color: #fff; margin-left: 15px;}
+.loan-box p{  font-size: 16px;  margin: 0 27px;  line-height: 35px;}
+.loan-btn {  margin: 38px auto 0 auto;  width: 120px;  height: 30px;  text-align: center;  font-size: 16px;  background-color: #eee;  color: #333;  display: block;  line-height: 28px;  border: 1px solid #ddd;  border-radius: 4px;  }
+/*贷款方案*/
+.loan-box1{ width: 285px;  height: 161px;  float: left;  background: #fff;  margin-right: 13px;  margin-bottom: 20px;  border: 1px solid #ddd;  }
+.loan-box1:hover{  border-color: #6eac00;  }
+.loan-box1-title{overflow: hidden}
+.loan-box1-title img{  float: left;  width: 44px;  margin-top: 20px;  margin-left: 40px;  margin-right: 10px;  }
+.loan-box1-title h3{  float: left;  font-size: 22px;  margin-top: 30px;  }
+.loan-box1-content p{  font-size: 16px;  line-height: 24px;  margin-top: 10px;  text-align: center;  }
+
+/*贷款资质*/
+.loan-box2:hover{ border-color: #6eac00; }
+.loan-box2{  width: 285px;  height: 250px;  float: left;  background-color: #fff;  margin-right: 13px;  border: 1px solid #ddd;  }
+.loan-box2-title{  background: #d23a3d;  overflow: hidden;  width: 287px;  height: 96px;  }
+.loan-box2-title img{  float: left;  width: 40px;  margin-top: 25px;  margin-left: 40px;  margin-right: 15px;  }
+.loan-box2-title h3{  float: left;  font-size: 22px;  margin-top: 35px;  color: #fff;  }
+.loan-box2-content p {  margin: 0 18px;  line-height: 24px;  text-align: center;  margin-top: 40px;  font-size: 18px;  }
+
+
+/********** 贷款申请 **********/
+.mr15{  margin-left: 20px !important;  }
+.apply-top{  height: 42px;  line-height: 42px;  font-size: 17px;  }
+.apply-content{   background: #ffffff;     border: 1px solid #ddd; }
+.apply-content-main{     overflow: hidden;  margin: 20px 0;  padding-bottom: 20px;  }
+.apply-content-title{  overflow: hidden;  height: 53px;  line-height: 53px;  font-size: 17px;  border-bottom: 1px solid #ddd;  }
+.apply-content-title-left{  float: left;  margin-left: 20px;  font-size: 21px;  font-weight: 600;  }
+.apply-content-title-right{      float: right;  margin-right: 20px;  font-size: 15px; }
+.apply-content-title-right i{  margin: 0 5px;  color: #46bef6;  }
+.main-sub{  float: left;  width: 545px;  }
+.main-list{     float: right;  border-left: 1px solid #d3d3d3;  padding-left: 55px;  margin-right: 150px;}
+.main-list ul li{  clear: both;  overflow: hidden;  height: 78px;  margin-top: 20px;  }
+.main-list ul li img{  float: left;  }
+.main-list ul li p{  float: left;  font-size: 17px;  margin-top: 5px;  margin-left: 20px;  line-height: 21px;  }
+.main-sub{   margin-left: 75px;}
+.main-sub ul li{  text-align: left;  height: 40px;  line-height: 40px;  font-size: 17px;  margin-top: 20px;  }
+.main-sub ul li input{ width: 271px;  border: 1px solid #ddd;  margin: 0 4px;  }
+.apply-btn{    width: 245px;  height: 45px;  color: #fff;  background: #46bef6;}
+
+/************ 评估成功************/
+.content-box img{  float: left;  }
+.content-box{  overflow: hidden;  margin: 0 auto;  width: 500px;  margin-top: 150px;  padding-bottom: 150px;  }
+.content-box p{    float: left;  font-size: 22px;  line-height: 41px;  margin-left: 25px;}
+.content-box p i{    color: #46bef6;}
+
+
+/************* 贷款申请 **********/
+.apply-content-title-left span{  font-size: 16px;  font-weight: 600;  }
+.ass ul li{  overflow: hidden;  margin-top: 40px;  }
+.ass-box{  width: 431px;  height: 245px;  border: 1px solid #46bef6;  float: left;  margin: 0 auto;  text-align: center;  }
+.numb{  width: 90px;  height: 90px;  font-size: 60px;  text-align: center;  line-height: 90px;  color: #ffffff;  border-radius: 50px;  background: #46bef6;  float: left;  margin-top: 79px;  margin-right: 96px;  }
+.ass-next{  width: 288px;  height: 92px;  clear: both;  margin: 0 auto;  text-align: center;  }
+.ass-next img{  margin-top: 18px;  }
+.ass-top{  overflow: hidden;  width: 790px;  margin: 0 auto;  }
+.ass-box p{  font-size: 22px;  margin-top: 69px;  }
+.ass-box-sec{  margin-top: 69px;  }
+.ass-box-sec select{  width: 288px;  height: 52px; font-size: 15px; }
+.net{  height: 92px;  line-height: 92px;  width: 335px;  margin-bottom: 62px;  background: #46bef6;  color: #fff;  font-size: 23px;  }
+
+
+/************* 贷款评估成功 *************/
+.assuess{  width: 840px;  margin: 0 auto;  margin-top: 40px;  border: 1px solid #46bef6;  margin-bottom: 50px;  text-align: center;  }
+.assuess .assuess-tit{  font-size: 35px;  margin-top: 110px;  }
+.assuess p{  font-size: 62px;  margin-top: 62px;  }
+.assessment-down{  overflow: hidden;  margin-bottom: 40px;  }
+.int-suc img{  margin-top: 39px;  }
+.int-suc h3{  margin-top: 10px;  margin-bottom: 12px;  font-size: 22px;  color: #46bef6;  }
+.int-suc h4{  margin-bottom: 27px;  font-size: 16px;  }
+.int-btn{  margin-bottom: 50px;  }
+.int-btn input{  display: block;  margin: 0 auto;  border: 1px solid #ddd;  margin-top: 20px;  }
+.int-btn-get,.int-btn-sub{  overflow: hidden;  width: 602px;  margin: 0 auto;  }
+.int-btn-1{  width: 600px;  height: 62px;  }
+.int-btn-2{  width: 426px;  height: 62px;  }
+.int-btn-3{  display: inherit;  float: left;  width: 440px;  height: 62px;  }
+.int-btn-3-1{  display: inherit;  float: left;  width: 135px;  height: 62px;  background: #f6ad10;  color: #fff;  font-size: 21px;  margin-left: 25px !important;  }
+.int-btn-4{  clear: both;  float: left;  width: 292px;  height: 61px;  color: #fff;  font-size: 21px;  background: #46bee5;  text-align: center;  margin-right: 10px !important;  }
+.int-btn-4-1{  float: left;  width: 292px;  height: 61px;  color: #fff;  font-size: 21px;  text-align: center;  background: #46bee5;  }
+/*推荐产品*/
+.mess-list{  height: 685px;width: 792px;  border: 1px solid #46bef6; background: #fff; }
+.mess-list-tit p{height: 66px;  line-height: 66px;  font-size: 20px;  margin-left: 20px;}
+.mess-list-cont ul li:first-child{  width: 752px;  margin: 0 auto;  font-size: 16px;  background: #f0f0f0;  height: 31px;  line-height: 31px;  }
+.cont1{    margin-left: 30px;  margin-right: 177px;  }
+.cont2{  margin-right: 80px;  }
+.cont3{  margin-right: 64px;  }
+.cont4{  margin-right: 83px;  }
+.cont-box{  height: 129px;  width: 752px;  margin: 0 auto;  line-height: 129px;  clear: both;  }
+.cont-box img{  float: left;  margin-top: 17px;  margin-left: 20px;  }
+.cont-box h3{  float: left;  font-size: 17px;  }
+.box1{  margin-left: 15px;  margin-right: 90px;  }
+.box2{  margin-right: 85px;  }
+.box3{  margin-right: 56px;  }
+.box4{  float: left;  width: 93px;  height: 30px;  background: #46bee5;  margin-top: 47px;  margin-left: 35px;  text-align: center;  line-height: 30px;  color: #fff;  font-size: 16px;}
+.mess-list-cont ul li:hover{background: #ececec}
+.cont-btn{  width: 752px;  margin: 0 auto;  height: 32px;  background: #f3f3f3;  text-align: center;  line-height: 32px;  font-size: 16px;  margin-top: 15px;  }
+/*贷款咨询动态*/
+.dyn{  height: 249px;     width: 393px; border: 1px solid #46bef6;  background: #fff;  }
+.dyn-tit{  border-bottom: 1px solid #ddd;  }
+.dyn-tit h3{  height: 66px;  line-height: 66px;  font-size: 20px;  margin-left: 30px;  }
+.dyn-cot ul li{  list-style: initial;  margin-bottom: 20px;  font-size: 16px;  margin-left: 40px;  margin-top: 21px;  }
+.dyn-cot ul li i{  margin: 5px;  color: #ff0000;  }
+/*成功案例*/
+.success-case{  height: 333px;     width: 393px; border: 1px solid #46bef6;  background: #fff;}
+.success-case-tit{  overflow: hidden;  height: 72px;  line-height: 72px;  font-size: 18px;  border-bottom: 1px solid #ddd;  }
+.success-case-tit h3{  float: left;  margin-left: 20px;  }
+.success-case-tit h4{  float: right;  margin-right: 20px;  }
+.success-case-cot{  overflow: hidden;  }
+.success-case-cot-box{  overflow: hidden;  }
+.success-case-cot p{  float: left;  height: 129px;  line-height: 43px;  margin-left: 20px;  }
+.success-case-cot h3{  float: right; margin-right: 20px; margin-top: 55px;  font-size: 18px;  }
+.success-case-cot-box:first-child{  border-bottom: 1px solid #ddd;  }
+/* chiose*/
+/**************** 找顾问***************/
+.chiose{  overflow: hidden;  width: 881px;  margin-bottom: 24px;  box-shadow: 0 10px 1px #d5d5d5;  font-size: 14px;  background: #fff;  }
+.scrn-type{  width: 135px;  text-align: center;  background: #efefef;  margin: 2px 0 0 7px;  }
+.chiose li{  width: 100%;  border-bottom: 1px dashed #dcdcdc;  overflow: hidden;  height: 69px;  line-height: 69px;  font-size: 19px;  }
+.chiose li p a {  padding: 0 10px;  margin: auto 10px;  }
+.ct{  width: 880px; background: #fff;  border: 1px solid #ddd;}
+.ct-t{  overflow: hidden;  height: 70px;  line-height: 70px;  font-size: 19px;  }
+.ct-t h2{  padding: 0 16px;  margin-right: 20px;  }
+.ct-page{  font-size: 16px;  margin-right: 10px;  padding: 0 10px;  }
+.ct-page a{  padding: 0 10px;  background: #efefef;  margin: 0 10px;  }
+.ct-page a:hover{  background: #7aa822;  color: #ffffff;  }
+.ct-c ul li{  margin-bottom: 1px;  padding-bottom: 18px;  width: 100%; overflow: hidden; border-bottom: 1px solid #ddd; }
+.ct-c ul li:hover{background: #dddddd}
+.ct-c-p{  margin-top: 10px;  margin-left: 20px;  }
+.ct-c-w{  margin-top: 10px;  margin-left: 20px;  font-size: 15px;  line-height: 24px;  }
+.ct-c-s {  margin-top: 60px;  margin-right: 30px;  font-size: 19px;  }
+.ct-c-s a{  color: #e2ab04;  }
+.ls-c-pg-top{  overflow: hidden;  }
+.ls-c-pg-top-list{  float: left;  margin: 12px;  text-align: center;  }
+.ls-c-pg-top-list h4{  font-size: 16px;  margin-top: 10px;  color: #f6ad10;  margin-top: 10px;  }
+.ls-c-pg-but{  clear: both;  text-align: center;  }
+.ls-c-pg-but h3{  font-size: 20px;  margin: 15px 0;  }
+.ls-c-pg-but-btn{  width: 245px;  height: 45px;  margin: 0 auto;  line-height: 45px;  background: #46bef6;  color: #fff;  font-size: 18px;  border: 1px solid #ddd;  }
+.ls-c-sq{  width: 245px;  margin: 0 auto;  height: 283px;  }
+.ls-c-sq input{  border: 1px solid #dddddd;  width: 130px;  height: 30px;  }
+.ls-c-sq div{  margin: 10px 0;  }
+.item-phone input{  width: 245px;  height: 30px;  }
+.item-btn{  width: 245px;  height: 40px;  text-align: center;  line-height: 45px;  color: #fff;  background: #46bef6;  font-size: 16px; margin: 0 auto; }
+.item-name .sexx{  display: inline-block;  display: -webkit-inline-box;  width: 15px;  height: 15px;  margin: 0 5px;  }
+.ct-page-b {  padding: 20px;  background: #fff;  text-align: center;  }
+.ct-page-sel {  position: relative;  display: inline-block;  width: 68px;  height: 30px;  font-size: 14px;  text-align: left;  z-index: 9;  }
+.ct-page-sel dt {  position: relative;  height: 28px;  line-height: 28px;  text-indent: 5px;  border: 1px solid #ddd;  background: #efefef;  cursor: pointer;  }
+.lookconsu-sub{  overflow: hidden;  width: 300px;  height: 350px;  background: #fff; border: 1px solid #ddd; }
+.lsb-t{  overflow: hidden;  height: 70px;  line-height: 70px;  font-size: 20px;  text-align: center;  }
+.lsb-tab-nav{  margin-left: 25px;  }
+.lsb-tab-nav ul li{  padding: 0 15px;  }
+.lsu-t{  overflow: hidden;  height: 70px;  line-height: 70px;  font-size: 18px;  border-bottom: 1px solid #ddd;  }
+.lsu-t h2{  padding: 0 16px;  margin-left: 20px;  }
+.dk-more{  padding: 0 16px;  margin-right: 20px;  font-size: 16px;  }
+.lookconsu-success{  overflow: hidden;  width: 300px; background: #fff;  margin-top: 28px; border: 1px solid #ddd; }
+.lsu-c-box{  overflow: hidden;  height: 130px;  margin: 0 auto; width: 272px;  border-bottom: 1px dashed #dedede;  }
+.lsu-c-box p{  margin-top: 20px; margin-left: 30px;  line-height: 30px;  }
+.lsu-c-box h3{      margin-top: 57px; margin-right: 21px; font-size: 20px;  }
+
+/************** 我有车******************/
+.hc-fl-top{  width: 740px; background: #fff;border: 1px solid #ddd;  }
+.hc-tit{  background: url(../images/bjtwoyc.png) no-repeat;  height: 167px;  width: 100%;  text-align: center;  }
+.hc-tit h3{  font-size: 36px;  padding: 10px;  line-height: 30px;  color: #fff;  text-align: center;  padding-top: 30px;  }
+.hc-tit h3:first-child{  width: 500px;  margin: 0 auto;  text-align: left;  }
+.hc-tit h3 i{  font-weight: 900;  }
+.hc-prp{  height: 150px;  border-bottom: 1px solid #ddd;  }
+.hc-prp h3{  font-size: 28px;  padding-top: 20px;  margin-left: 30px;  color: #3299c9;  }
+.hc-prp p{  margin-top: 30px;  margin-left: 30px;  font-size: 15px;  line-height: 20px;  color: #3299c9;  }
+.hc-fl-button{  width: 740px;  height: 400px;  margin-top: 20px;  background: #fff;  margin-bottom: 120px; border: 1px solid #ddd; }
+.hc-fr-top{  width: 445px;  height: 308px;  background: #fff;  text-align: center; border: 1px solid #ddd; }
+.hc-fr-top h3{  font-size: 25px;  padding: 30px 0 3px 0;  font-weight: 800;  }
+.hc-fr-top h3:nth-child(2){color: #3299c9}
+.hc-fr-top .hc-ques {  width: 250px;  margin: 0 auto;  text-align: left;  margin-top: 20px;  font-size: 16px;  line-height: 24px;  }
+.hc-ques i{  color: red;  }
+.hc-fr-button{  width: 445px;  height: 745px;  background: #fff;  margin-top: 20px;    margin-bottom: 40px; border: 1px solid #ddd; }
+.hc-fl-top-list{  height: 150px;  border-bottom: 1px solid #ddd;  }
+.hc-phone{  overflow: hidden;  width: 300px;  margin: 0 auto;  margin-top: 26px;  }
+.hc-phone img{  display: block;  float: left;  width: 51px;  margin-right: 20px;  }
+.ui-tab-nav-tit{  overflow: hidden;  border-bottom: 1px solid #ddd;  }
+.ui-tab-nav-tit ul li{  float: left;  width: 50%;  height: 80px;  line-height: 80px;  text-align: center;  font-size: 20px;  }
+.plan-con02{  width: 100%;  }
+.plan-con02 ul{  overflow: hidden;  width: 345px;  margin: 0 auto;  }
+.plan-con02 ul li a {  width: 110px;  height: 120px;  display: block;  border: 3px solid #ddd;  text-align: center;  color: #000;  font-size: 14px;  border-radius: 15px;  }
+.plan-con02 ul li a:hover{  border: 3px solid #749f28;  }
+.plan-con02 ul li{  float: left;  margin-top: 30px;  margin-right: 57px;  }
+.plan-con02 ul li img{  display: block;  margin: 0 auto;  margin-top: 8px;  margin-bottom: 8px;  }
+.mr20{  margin-right: 10px !important;  margin-left: 40px;  }
+.hc-phone p{  float: left;  font-size: 23px;  line-height: 30px;  }
+.hc-img{  background: url(../images/sqtj.png) no-repeat;  float: left;  width: 150px;  height: 100px;  text-align: left;  line-height: 89px;  font-size: 22px;  padding-left: 10px;  margin-left: 20px;  margin-top: 30px;  }
+.hc-change p{  float: left;  margin-top: 40px;  font-size: 17px;  line-height: 30px;  }
+.hc-fl-top-list-lf{  float: left;  margin-top: 30px;  margin-left: 30px;  margin-right: 10px;  }
+.hc-fl-top-list-lr{  float: left;  }
+.hc-fl-top-list-lf img{  display: block;  }
+.hc-fl-top-list-lr h3{  margin-top: 30px;  font-size: 20px;  }
+.hc-fl-top-list-lr h3 span{  margin: 0 11px;  }
+.hc-fl-top-list-lr h3 i{  font-size: 27px;  color: #e53b3d;  }
+.hc-fl-top-list-lr p{  margin-top: 30px;  margin-left: 10px;  font-size: 15px;  line-height: 21px;  }
+.hc-fl-top-list-lr p span{  margin: 0 10px;  }
+.sj1{  background: url(../images/sj1.png) no-repeat;  width: 12px;  height: 14px;  display: -webkit-inline-box;  display: inline-block;  }
+.sj2{  background: url("../images/sj2.png") no-repeat;  width: 12px;  height: 14px;  display: -webkit-inline-box;  display: inline-block;  }
+.hc-fl-button-tit h3{  padding-top: 30px;  margin-left: 20px;  font-size: 28px;  }
+.hc-fl-button-cont{  text-align: left;  }
+.hc-fl-button-cont div{  height: 33px;  line-height: 33px;  width: 258px;  margin: 0 auto;  margin-top: 20px;  }
+.hc-fl-button-cont input{  border: 1px solid;  }
+
+
+
+/************** 高额度贷款z******************/
+.hc-fr-main{  margin-top: 20px;  background: #fff;  }
+.hc-fr-main-tit{  overflow: hidden;  border-bottom: 1px solid #ddd;  height: 49px;  line-height: 49px;  }
+.hc-fr-main-tit h2{  padding: 0 16px;  margin-right: 20px;  height: 49px;  font-size: 20px;  }
+.hc-fr-main ul li{  overflow: hidden;  margin-top: 30px;  }
+.hc-fr-main ul li img{  display: block;  float: left;  margin-left: 40px;  margin-right: 20px;  }
+.hc-fr-main ul li .hct-box{  float: left;  margin-top: 20px;  font-size: 18px;  line-height: 31px;  margin-left: 20px;  }
+.hct-box i{  font-style: oblique;  margin: 0 5px;  font-size: 21px;  }
+.hct-listone{  width: 739px;  background: #fff;  }
+.hct-listtwo{  width: 739px; background: #fff;  margin-top: 20px;    border: 1px solid #ddd;  }
+.hct-listthree{  width: 739px;  background: #fff;  margin-top: 20px;  margin-bottom: 60px;     border: 1px solid #ddd; }
+.htc-box-fir{  background: url(../images/bjtwoyc.png) no-repeat;  height: 165px;  }
+.htc-box{  height: 150px;  border-bottom: 1px solid #ddd;  }
+.htc-box-fir h3{  font-size: 36px;  padding: 10px;  line-height: 30px;  color: #fff;  text-align: center;  padding-top: 30px;  }
+.htc-box-fir h3:first-child {  width: 506px;  margin: 0 auto;  text-align: left;  }
+.htc-box-fir h3 i {  font-weight: 900;  }
+.htc-box img{  display: block;  float: left;  margin-top: 20px;  margin-left: 30px;  margin-right: 40px;  }
+.lr-word-bu{  float: left;  margin-top: 21px;  line-height: 25px;  }
+.lr-word-bu h3{  font-size: 26px;  color: #3299c9;  margin: 5px 0;  }
+.lr-word-bu h4{  font-size: 16px;  }
+.hct-listtwo-tit{  width: 739px;  text-align: center;  background: #e8e8e8;  color: #fff;  }
+.triangle_border_down{  background: url(../images/anliandzhishidian.png) no-repeat center;  height: 160px;  }
+.hct-listtwo-cot p{  margin: 0 auto;  margin-top: 30px;  width: 562px;  line-height: 23px;  border-bottom: 1px solid #ddd;  padding-bottom: 20px;  }
+.hct-listtwo-bottom{  overflow: hidden;  margin: 0 auto;  width: 557px;  margin-top: 30px;     padding-bottom: 30px; }
+.hct-listtwo-bottom img{  float: left;  }
+.hct-listtwo-bottom p{  float: left;  line-height: 23px;  margin-left: 20px;  margin-top: 20px;     width: 420px; }
+.hct-listthree-tit{  text-align: center;  height: 105px;  line-height: 105px;  background: #e8e8e8;  color: #000;  font-size: 37px;  }
+.hct-listthree-cot ul li{  overflow: hidden;  height: 120px;  border-bottom: 1px solid #ddd;  }
+.hct-bef{  float: left;  }
+.hct-aft{  float: left;  margin-top: 45px;  font-size: 23px;  font-weight: 800;  width: 580px;  }
+.hct-cot1{  display: none;  }
+.show{  display: block;  }
+.hct-bef{  float: left;  margin: 0px 35px;  margin-top: 31px;  width: 50px;  height: 50px;  text-align: center;  line-height: 50px;  background: #528298;  color: #fff;  border-radius: 50px;  font-size: 18px;  }
+.hct-cot1-bef{  float: left;  margin: 0px 35px;  margin-top: 31px;  width: 50px;  height: 50px;  text-align: center;  line-height: 50px;  background: #0caaf3;  color: #fff;  border-radius: 50px;  font-size: 18px;  }
+.hct-cot1-aft{  float: left;  font-size: 14px;  width: 610px;  margin-top: 20px;  line-height: 21px;  }
+.htc-btn{  width: 470px;  border: 1px solid;  height: 60px;  margin-top: 20px;  margin-left: 30px;  font-size: 17px;  }
+.htc-sub{  width: 205px;  height: 62px;  background: #0caaf3;  color: #fff;  font-size: 20px;  }
+.hct-sub{  margin-top: 20px;  width: 445px;  }
+
+
+/************* 贷款咨询****************/
+.apply-content-content{  margin-bottom: 30px;  }
+.cta p{  font-size: 18px;  line-height: 28px;  margin: 20px;  }
+.cta p:last-child{  padding-bottom: 20px;  }
+
+
+
+/************** 成功案例z******************/
+.succful-case ul li{  padding-bottom: 10px;  }
+.succful-case-cont{  width: 700px;  }
+.case-bom{  margin: 10px 0;  }
+.colr-grary{  color: #a0a0a0;  }
+
+
+
+/************** 我有房z******************/
+.house{  height: 305px;  }
+.house-tit{  overflow: hidden;  }
+.house-tit-box{  float: left;  margin: 40px 10px 10px 37px;  text-align: center;  }
+.house-cot h3{  font-size: 16px;  margin: 10px 0;  }
+.house-tit-box img{  display: block;  margin: 0 auto;  }
+.house-tit-box span{  font-size: 18px;  margin-top: 20px;  display: block;  }
+.house-cot{  margin-left: 40px;  margin-top: 30px;  }
+
+/*修改*/
+.color-black{
+    color: #5e6060 !important;
+}
+
+/************** 贷款分类z******************/
+.morcar{  height: 450px;  }
+.morcar-top{  height: 123px;  width: 700px;  margin: 0 auto;  border-bottom: 1px solid #ddd;  }
+.morcar-top h3{  padding-top: 30px;  font-size: 18px;  margin-left: 20px;  }
+.morcar-top h4{  margin-left: 20px;  font-size: 16px;  margin-top: 10px;  line-height: 20px;  }
+.morcar-bottom{  width: 700px;  margin: 0 auto;  font-size: 18px;  margin-top: 30px;  }
+.morcar-bottom h3{  margin: 20px;  }
+.morcar-box{  margin: 40px 20px 20px 20px;  }
+.morcar-box span{  float: left;  margin-top: 6px;  margin-right: 10px;  }
+.morcar-box p{  float: left;  width: 500px;  font-size: 17px;  line-height: 30px;  }
+.plan-con01{  display: block;  overflow: hidden;  }
+.plan-con01 ul li{  overflow: hidden;  text-align: center;  width: 350px;  height: 95px;  margin: 0 auto; background: #e6e6e6; margin-top: 30px;  margin-bottom: 30px;  }
+.ui-tab-nav-tit ul li a{  color: #f0585b;  }
+.plan-con01 ul li:hover{  background: #46bef6;  }
+.plan-con01 ul li img{  display: block;  float: left;  margin-top: 15px;  margin-left: 60px;  }
+.plan-con01 ul li h3{  float: left;  color: #fff;  font-size: 19px;  margin-top: 38px;  margin-left: 30px;  }
+
+
+/************ 关于我们**************/
+.adviser{  overflow: hidden;  margin-bottom: 60px;  }  .adviser-video{  margin: 60px 0;  }
+.adviser-video img{  display: block;  margin: 0 auto;  }
+.adviser-profiles{  overflow: hidden;  }
+.adviser-advantage p{  text-align: center;  font-size: 19px;  line-height: 28px;  margin: 50px;  }
+.adviser-profiles .fl p{  font-size: 20px;  line-height: 30px;  color: #000;  font-weight: 600;  margin-top: 80px;  margin-left: 60px;  }
+.adviser-profiles-right-box{  width: 449px;  height: 363px;  border: 1px solid;  text-align: center;  margin-right: 40px;  }
+.adviser-profiles .fr h3{  text-align: center;  margin-top: 20px;  font-size: 21px;  margin-bottom: 10px;  color: #000;  font-weight: 600;  }
+
+
+/********** 顾问详情***********/
+.details-fl{  margin-top: 36px;  }
+.details-fl h3{  text-align: center;  font-size: 18px;  margin: 20px;  }
+.details-fl h4{  text-align: center;  font-size: 18px;  }
+.details-fr{  width: 940px;  }
+.details-tit{  margin-top: 36px;  }
+.details-tit h3{  font-size: 30px;  padding-top: 20px;  margin-bottom: 28px;  }
+.details-tit h4{  font-size: 20px;  margin: 20px 0;  }
+.details-tit span{  margin-right: 20px;  }
+.details-tit p{  font-size: 18px;  margin: 20px 0;  line-height: 33px;  }
+.details-border{  background: none;  border: 1px solid #ddd;  }
+
+
+/*找贷款  申请贷款  贷款评估*/
+.mortgage-chiose{  position: absolute;  top: 12px;  right: -50px;  background: url(../images/beij.png);  }
+.mortgage-chiose-top{  width: 150px;  height: 180px;  text-align: center;  line-height: 180px;  color: #fff;  font-size: 18px;  }
+.mortgage-chiose-buttom{  width: 150px;  height: 180px;  text-align: center;  line-height: 180px;  color: #fff;  font-size: 18px;  }
+.active{  color: #fd373b;  }
+.loan-con02-top{  overflow: hidden;  text-align: center;  margin-top: 40px;  margin-left: 20px;  border-bottom: 1px solid #ddd;  padding-bottom: 20px;  }
+.loan-con02-top ul li{  float: left;  margin-right: 9px;  text-align: center;  font-size: 14px;  margin-left: 11px;  }
+.loan-con02-top ul li img{  display: block;  margin: 0 auto 10px auto;  width: auto;  height: 65px;  }
+.loan-con02 p{  text-align: center;  font-size: 20px;  margin-top: 30px;  line-height: 30px;  }
+.loan-con02 a{  width: 270px;  margin: 30px 0 0 30px;  height: 40px;  line-height: 40px;  font-size: 18px;  color: #fff;  background-color: #7faf2a;  display: block;  text-align: center;  border-radius: 2px;  }
+
+/********** 注册***********/
+.register{  background: #fff;  height: 655px;  margin-top: 40px;  }
+.register-tit{  text-align: center;  font-size: 24px;  padding-top: 20px;  width: 1000px;  margin: 0 auto;  border-bottom: 1px solid #000;  padding-bottom: 20px;  }
+.register-cot{  text-align: center;  width: 1000px;  margin: 0 auto;  }
+.reg-phone{  margin: 40px 0 20px 0;  }
+.reg-phone input{  border: 1px solid #ddd;  width: 420px;  height: 50px;  font-size: 16px;  }
+.reg-name{  margin: 20px 0;  }
+.reg-name input{  border: 1px solid #ddd;  width: 420px;  height: 50px;  font-size: 16px;  }
+.reg-password{  margin: 20px 0;  }
+.reg-password input{  border: 1px solid #ddd;  width: 420px;  height: 50px;  font-size: 16px;  }
+.reg-mpv1{  width: 270px;  height: 50px;  border: 1px solid #ddd;  font-size: 16px;  }
+.reg-mpv2{  width: 130px;  height: 50px;  background: #feb252;  text-align: center;  font-size: 16px;  margin-left: 13px;  color: #fff;  }
+.reg-mpv{  margin: 20px 0;  }
+.reg-btn{  width: 422px;  height: 50px;  background: #46bef6;  color: #fff;  font-size: 17px;  margin-left: 124px;  }
+.reg-sub{  text-align: center;  margin: 0 auto;  }
+.reg-text{  margin: 10px 0;  }
+
+
+/********** 忘记密码***********/
+.register{  background: #fff;  height: 655px;  margin-top: 40px;  }
+.register-tit{  text-align: center;  font-size: 24px;  padding-top: 20px;  width: 1000px;  margin: 0 auto;  border-bottom: 1px solid #000;  padding-bottom: 20px;  }
+.register-cot{  text-align: center;  width: 1000px;  margin: 0 auto;  }
+.reg-phone{  margin: 40px 0 20px 0;  }
+.reg-phone input{  border: 1px solid #ddd;  width: 420px;  height: 50px;  font-size: 16px;  }
+.reg-name{  margin: 20px 0;  }
+.reg-name input{  border: 1px solid #ddd;  width: 420px;  height: 50px;  font-size: 16px;  }
+.reg-password{  margin: 20px 0;  }
+.reg-password input{  border: 1px solid #ddd;  width: 420px;  height: 50px;  font-size: 16px;  }
+.reg-mpv1{  width: 270px;  height: 50px;  border: 1px solid #ddd;  font-size: 16px;  }
+.reg-mpv2{  width: 130px;  height: 50px;  background: #feb252;  text-align: center;  font-size: 16px;  margin-left: 13px;  color: #fff;  }
+.reg-mpv{  margin: 20px 0;  }
+.reg-btn{  width: 422px;  height: 50px;  background: #46bef6;  color: #fff;  font-size: 17px;  margin-left: 124px;  }
+.reg-sub{  text-align: center;  margin: 0 auto;  }
+.reg-text{  margin: 10px 0;  }
+
+
+/********** 登录***********/
+.sign{  height: 468px;  background: #fff;  margin-top: 140px;  }
+.sign .fl{  margin-left: 100px;  margin-top: 40px;}
+.sign-phone{  margin: 20px 0;  }
+.sign-phone input{  border: 1px solid #ddd;  width: 340px;  height: 50px;  font-size: 16px;  }
+.sign-password{  margin: 20px 0;  }
+.sign-password input{  border: 1px solid #ddd;  width: 340px;  height: 50px;  font-size: 16px;  }
+.sign-btn{  margin: 60px 0;  }
+.sign-btn input{  width: 152px;  height: 37px;  color: #fff;  font-size: 16px;  background: #46bef6;  }
+.sign-btn h3{  margin: 10px 0;  }
+
+
+
+/********** 关于我们***********/
+.map-box{  width: 950px;  margin: 0 auto;  overflow: hidden;  }
+.map-fl{  float: left;  margin-right: 10px;  }
+.map-fl h3{  font-size: 31px;  margin: 18px 0px;  }
+.map-fl h4{  font-size: 17px;  margin: 10px 0;  }
+.wrap310{  width: 410px;  height: 674px;  margin-top: 30px;  float: left;  background: #fff;  border: 1px solid #ddd;  }
+.wrap870{  width: 770px;  margin-top: 30px;  float: right;  background: #fff;  border: 1px solid #ddd;  }
+.ad-b{  width: 317px;  height: 53px;  background: #a4a4a4;  text-align: center;  line-height: 53px;  font-size: 18px;  color: #fff;  margin: 0 auto;  margin-top: 10px;  }
+.wrap310 ul li{  width: 315px;  height: 53px;  background: #f0f0f0;  text-align: center;  line-height: 53px;  margin: 0 auto;  font-size: 18px;  border: 1px solid #ddd;  }
+.wrap310 ul{  margin-top: 20px;  }
+.red{  background: #ff0000;  }
+.wrap310 h3{  width: 300px;  text-align: center;  margin: 0 auto;  margin-top: 20px;  font-size: 20px;  margin-bottom: 50px;  }
+#compjss h3,#comprys h3,#comptds h3,#compwhs h2,#complws h3{  width: 700px;  margin: 0 auto;  text-align: center;  height: 80px;  line-height: 80px;  font-size: 23px;  margin-top: 20px;  }
+.loan-title hr{  width: 100%;  }
+.wrap870 ul li{  display: none;  }
+.show{  display: block !important;  }
+.rt{  background: url(../images/sj2.png) no-repeat 290px !important;  }
+#compjss p{      font-size: 16px;  line-height: 26px;  width: 700px;  margin: 0 auto;  margin-bottom: 10px;  }
+#compjss img{  margin-left: 60px;  }
+#compwhs p{  font-size: 16px;  line-height: 26px;margin: 0 auto;text-align: center;    margin-top: 49px;  margin-bottom: 50px;  }
+#complws p{  font-size: 18px;  line-height: 28px;  width: 570px;  margin: 0 auto;  }
+.color-red{  color: red;  }
+#comptds ul li img{
+    float: left;
+    width: 182px;
+    height: 200px;
+}
+.itemif{
+    float: left;
+    margin-top: 30px;
+    margin-left: 25px;
+}
+.itemif h4{
+    font-size: 30px;
+}
+.itemif p{
+    font-size: 16px;
+    margin-top: 20px;
+    line-height: 29px;
+}
+#comptds ul li{
+    display: block;
+    overflow: hidden;
+    width: 650px;
+    margin: 0 auto;
+    height: 270px;
+}
